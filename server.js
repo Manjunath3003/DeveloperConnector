@@ -5,6 +5,9 @@ const app = express();
 // connect DataBase
 connectDB();
 
+//Init Middleware // middleware is a function that executes during request to the express server
+app.use(express.json({ extended: false })); // bodyparser which helps to get data from req.body
+
 app.get("/", (req, res) => res.send("API Running"));
 
 // define routes

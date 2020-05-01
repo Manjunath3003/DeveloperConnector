@@ -1,22 +1,22 @@
-const mongoose = require("mongoose");
+var mongoose = require("mongoose");
 
-const UserSchema = mongoose.Schema({
+const UserSchema = new mongoose.Schema({
   name: {
-    type: string,
+    type: String,
     required: true,
   },
   email: {
-    type: string,
+    type: String,
     required: true,
     unique: true,
   },
   password: {
-    type: string,
+    type: String,
     required: true,
   },
   //avatar connects profile image to email
   avatar: {
-    type: string,
+    type: String,
     required: true,
   },
   date: {
