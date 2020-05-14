@@ -30,7 +30,7 @@ const ProfileSchema = new mongoose.Schema({
     type: String
   },
   experience: [
-    // array type
+    // array type iterable
     {
       title: {
         type: String,
@@ -90,7 +90,7 @@ const ProfileSchema = new mongoose.Schema({
     }
   ],
   social: {
-    // object
+    // object is static since they are key value pairs eg: facebook: "link"
     youtube: {
       type: String
     },
